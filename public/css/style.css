@@ -75,10 +75,13 @@ main div > section > div:nth-child(1) {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-200);
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-300);
   margin-block-end: var(--spacing-300);
   @media (min-width: 768px) {
     margin-block-end: var(--spacing-400);
+    padding-block: var(--spacing-200);
+    padding-inline: var(--spacing-200);
   }
 }
 
@@ -88,7 +91,7 @@ main div > section > div > div {
   white-space: nowrap;
 }
 
-main div > section > div > div:nth-child(2) {
+.change {
   align-self: center;
 }
 
@@ -100,7 +103,7 @@ button {
   cursor: pointer;
   border: none;
   padding: var(--spacing-200);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 20px -10px var(--blue-700-color);
   margin-bottom: var(--spacing-400);
 }
 
