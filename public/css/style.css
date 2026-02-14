@@ -1,0 +1,134 @@
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --gray-600-color: hsl(224, 23%, 55%);
+  --purple-color: hsl(245, 83%, 68%);
+  --blue-950-color: hsl(223, 47%, 23%);
+  --blue-700-color: hsl(245, 75%, 52%);
+  --blue-150-color: hsl(224, 100%, 92%);
+  --blue-100-color: hsl(225, 100%, 94%);
+  --blue-50-color: hsl(225, 100%, 98%);
+
+  --spacing-0: 0rem;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-600: 3rem;
+
+  --letter-spacing-0: 0px;
+
+  --line-height-165: 165%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  place-items: center; /*Aligne horizontalement et verticalement (uniquemnet pour display: grid) */
+  min-width: 320px; /* Sécurité pour très petit écran */
+  margin-inline: auto;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-color: var(--blue-100-color);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-width: 768px) {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+main {
+  background: var(--blue-900-color);
+  max-width: 327px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px var(--blue-150-color);
+  text-align: center;
+  @media (min-width: 768px) {
+    max-width: 450px;
+  }
+}
+
+main > div {
+  background: var(--white-color);
+  padding-block: var(--spacing-400);
+  padding-inline: var(--spacing-200);
+
+  @media (min-width: 768px) {
+    padding-block: var(--spacing-600);
+    padding-inline: var(--spacing-600);
+  }
+}
+
+p {
+  margin-block: var(--spacing-200) var(--spacing-300);
+  @media (min-width: 768px) {
+    margin-block: var(--spacing-200) var(--spacing-200);
+  }
+}
+
+main div > section > div:nth-child(1) {
+  background: var(--blue-50-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-200);
+  margin-block-end: var(--spacing-300);
+  @media (min-width: 768px) {
+    margin-block-end: var(--spacing-400);
+  }
+}
+
+main div > section > div > div {
+  display: flex;
+  gap: var(--spacing-100);
+  white-space: nowrap;
+}
+
+main div > section > div > div:nth-child(2) {
+  align-self: center;
+}
+
+button {
+  background: var(--blue-700-color);
+  color: var(--white-color);
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  padding: var(--spacing-200);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: var(--spacing-400);
+}
+
+button:active {
+  background: var(--purple-color);
+}
+
+.change,
+.cancel {
+  cursor: pointer;
+}
+
+.cancel:active {
+  color: var(--black-color);
+}
+
+.blue-700 {
+  color: var(--blue-700-color);
+}
+
+.blue-950 {
+  color: var(--blue-950-color);
+}
+
+.gray-600 {
+  color: var(--gray-600-color);
+}
+
+.white {
+  color: var(--white-color);
+}

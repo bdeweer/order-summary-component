@@ -2,12 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>order-summary-component</title>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <link rel="stylesheet" href="public/css/reset.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/css/fonts.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <main>
+      <img src="/images/illustration-hero.svg" alt="order-summary" />
+      <div>
+        <h1 class="text-preset-1">Order summary</h1>
+        <p class="text-preset-3-medium gray-600">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <section>
+          <div>
+            <div>
+              <img src="/images/icon-music.svg" alt="music" />
+              <div>
+                <div class="text-preset-3-black blue-950">Annual Plan</div>
+                <div class="text-preset-3-medium gray-600">$59.99/year</div>
+              </div>
+            </div>
+            <div class="text-preset-4-bold blue-700 change">Change</div>
+          </div>
+          <button class="text-preset-4-black white payment">
+            Proceed to Payment
+          </button>
+          <div class="text-preset-3-black gray-600 cancel">Cancel Order</div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
